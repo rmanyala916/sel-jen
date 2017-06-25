@@ -21,7 +21,7 @@ public class GoogleStartPageTest {
 	@Before
 	public void setUp() throws MalformedURLException {
 		String serverUrl = System.getProperty("grid.server.url");
-		String gridServerUrl = "http://192.168.99.1:4444/wd/hub";
+		String gridServerUrl = "http://localhost:4444/wd/hub";
 		if (serverUrl != null) {
 			gridServerUrl = serverUrl;
 		}
