@@ -12,9 +12,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<selenium.version>2.47.2</selenium.version>
+		<selenium.version>2.4.0</selenium.version>
 		<junit.version>4.12</junit.version>
-		<javac.version>1.7</javac.version>
+		<javac.version>1.8</javac.version>
 	</properties>
 
 	<build>
