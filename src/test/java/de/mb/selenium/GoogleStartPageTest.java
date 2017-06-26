@@ -25,7 +25,7 @@ public class GoogleStartPageTest {
 		if (serverUrl != null) {
 			gridServerUrl = serverUrl;
 		}
-		DesiredCapabilities capability = DesiredCapabilities.firefox();
+		DesiredCapabilities capability = DesiredCapabilities.chrome();
 		URL gridUrl = new URL(gridServerUrl);
 		driver = new RemoteWebDriver(gridUrl, capability);
 		driver.get("http://www.google.com");
