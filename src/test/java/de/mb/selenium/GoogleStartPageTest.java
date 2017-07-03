@@ -28,7 +28,7 @@ public class GoogleStartPageTest {
 		DesiredCapabilities capability = DesiredCapabilities.chrome();
 		URL gridUrl = new URL(gridServerUrl);
 		driver = new RemoteWebDriver(gridUrl, capability);
-		driver.get("http://www.google.com");
+		driver.get("http://tomcat:10000");
 	}
 
 	@After
@@ -36,20 +36,32 @@ public class GoogleStartPageTest {
 		driver.quit();
 	}
 
+	// @Test
+	// public void pageTitleIsNotNull() throws MalformedURLException {
+	// 	WebElement element = driver.findElement(By.name("q"));
+	// 	element.sendKeys("Cheese!");
+	// 	element.submit();
+	// 	assertTrue(driver.getTitle() != null);
+	// }
+
+	// @Test
+	// public void pageTitleContainsGoogle() throws MalformedURLException {
+	// 	WebElement element = driver.findElement(By.name("q"));
+	// 	element.sendKeys("Cheese!");
+	// 	element.submit();
+	// 	assertTrue(driver.getTitle().contains("Google"));
+	// }
+
 	@Test
-	public void pageTitleIsNotNull() throws MalformedURLException {
-		WebElement element = driver.findElement(By.name("q"));
-		element.sendKeys("Cheese!");
-		element.submit();
-		assertTrue(driver.getTitle() != null);
+	public void pageBodyIsNotNull() throws MalformedURLException {
+		String bodyText = driver.findElement(By.tagName("body")).getText();
+		assertTrue(bodyText != null);
 	}
 
 	@Test
-	public void pageTitleContainsGoogle() throws MalformedURLException {
-		WebElement element = driver.findElement(By.name("q"));
-		element.sendKeys("Cheese!");
-		element.submit();
-		assertTrue(driver.getTitle().contains("Google"));
+	public void pageBody2IsNotNull() throws MalformedURLException {
+		String bodyText2 = driver.findElement(By.XPath("//html/body")).Text;
+		assertTrue(bodyText2 != null);	
 	}
 
 }
