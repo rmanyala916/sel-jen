@@ -58,10 +58,10 @@ public class GoogleStartPageTest {
 		assertTrue(bodyText != null);
 	}
 
-	@Test
-	public void pageBody2IsNotNull() throws MalformedURLException {
-		String bodyText2 = driver.findElement(By.XPath("//html/body")).Text;
-		assertTrue(bodyText2 != null);	
-	}
+	// @Test
+	// public void pageBody2IsNotNull() throws MalformedURLException {
+	// 	String bodyText2 = driver.findElement(By.XPath("//html/body")).Text;
+	// 	assertTrue(bodyText2 != null);	
+	// }
 
 }
